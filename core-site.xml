@@ -1,0 +1,31 @@
+<configuration>
+<property>
+	  <name>hadoop.tmp.dir</name>
+	  <value>/home/module/hadoop-2.6.0-cdh5.13.0/data</value>
+	</property>
+	
+	<property>
+	  <name>fs.defaultFS</name>
+	  <value>hdfs://mycluster</value>
+	</property>
+
+	<property>
+	  <name>dfs.journalnode.edits.dir</name>
+	  <value>/home/module/hadoop-2.6.0-cdh5.13.0/data/jn</value>
+	</property>
+	
+	<!--zookeeper集群地址-->
+	<property>
+	   <name>ha.zookeeper.quorum</name>
+	   <value>hadoop11:2181,hadoop12:2181,hadoop13:2181</value>
+	</property>
+	<property>
+          <name>ipc.client.connect.max.retries</name>
+          <value>30</value>
+       </property>
+ 
+      <property>
+          <name>ipc.client.connect.retry.interval</name>
+          <value>1000</value> 
+      </property>
+</configuration>
